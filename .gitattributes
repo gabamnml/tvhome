@@ -1,0 +1,17 @@
+# PowerShell on Windows is happiest with CRLF; everything else stays LF.
+* text=auto eol=lf
+*.ps1   text eol=crlf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+*.png   binary
+*.jpg   binary
+*.ttf   binary
+*.jks   binary
+*.apk   binary
+*.jar   binary
+
+# Don't let GitHub count the font or the screenshots as "the language" of this
+# repo, and don't show generated/vendored files in diffs by default.
+launcher/assets/fonts/*  linguist-vendored
+docs/img/*               linguist-documentation

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ======================================================================
+     Everything you are likely to want to change lives in this one file.
+     Edit, then run  tools\build-install.ps1  to push it to the TV.
+     ====================================================================== -->
+<resources>
+
+    <!-- THE DOCK, left to right. Exactly these four, in this order.
+         A package that isn't installed is skipped silently, so it's safe to
+         leave spares in the list. Find a package name with:
+             adb shell pm list packages | findstr netflix               -->
+    <string-array name="dock_packages">
+        <item>com.google.android.youtube.tv</item>
+        <item>com.netflix.ninja</item>
+        <item>com.stremio.one</item>
+        <item>com.spotify.tv.android</item>
+    </string-array>
+
+    <!-- Apps never shown anywhere, dock or grid. -->
+    <string-array name="hidden_packages">
+        <item>com.binario.tvhome</item>
+    </string-array>
+
+    <!-- THE WALLPAPER. res/drawable/wallpaper.xml is a flat colour by default.
+         To use a picture instead: delete wallpaper.xml, drop your image in as
+         res/drawable/wallpaper.png (or .jpg), rebuild. Keep it 1920x1080. -->
+
+    <integer name="grid_columns">4</integer>
+
+    <!-- THE BACKGROUND. Focusing an app washes the whole screen with a colour
+         sampled from that app's own banner. Set false for a flat black screen. -->
+    <bool name="show_ambient_glow">true</bool>
+
+    <!-- How strong that wash is, 0-100. Around 25 is a whisper, 60 is bold. -->
+    <integer name="backdrop_intensity">35</integer>
+
+    <!-- The app's name under the focused grid tile. Off, so the only thing that
+         reacts to focus is the background colour. Set true to bring them back. -->
+    <bool name="show_tile_labels">false</bool>
+
+    <!-- WEATHER, next to the clock. Position comes from an IP lookup (ipapi.co),
+         conditions from Open-Meteo. No API key, nothing to register.
+         Set false to drop it entirely - the launcher then makes no network
+         requests at all, which is how it shipped. -->
+    <bool name="weather_enabled">true</bool>
+    <bool name="weather_fahrenheit">false</bool>
+
+    <!-- Corner radius of the app banners, in dp. The glass highlight derives its
+         own radius from this (tile + 8dp gap) so the two curves stay concentric
+         instead of fighting each other. 0 = square corners. -->
+    <integer name="tile_corner_radius">10</integer>
+
+    <!-- Glass highlight feel. Higher stiffness = snappier. Damping below 1.0
+         overshoots slightly; 1.0 stops dead with no bounce. -->
+    <integer name="spring_stiffness">900</integer>
+    <string name="spring_damping">0.78</string>
+</resources>

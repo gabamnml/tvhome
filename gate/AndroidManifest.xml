@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Throwaway. Proves two things before we invest in the real launcher:
+     1. this box accepts a sideloaded APK at all,
+     2. it accepts one declaring android.intent.category.HOME without a
+        manufacturer signature. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.binario.tvhome"
+    android:versionCode="1"
+    android:versionName="0.1-gate">
+
+    <uses-feature android:name="android.software.leanback" android:required="true" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <application
+        android:label="TV Home"
+        android:theme="@android:style/Theme.NoTitleBar">
+
+        <activity
+            android:name=".GateActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

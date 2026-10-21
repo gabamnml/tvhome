@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Home</string>
+
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="greeting_night">Good night</string>
+
+    <!-- Spoken by TalkBack for the cog; not drawn on screen. -->
+    <string name="pill_settings">Settings</string>
+
+    <string name="launch_failed">Couldn\'t open %1$s</string>
+
+    <!-- Weather. %1$d is the temperature, already rounded and in the configured unit. -->
+    <string name="wx_now">%1$d°  %2$s</string>
+    <string name="wx_temp_only">%1$d°</string>
+    <string name="wx_max_min">max %1$d°  ·  min %2$d°</string>
+
+    <string name="wx_clear">Clear</string>
+    <string name="wx_mainly_clear">Mainly clear</string>
+    <string name="wx_partly_cloudy">Partly cloudy</string>
+    <string name="wx_overcast">Overcast</string>
+    <string name="wx_fog">Fog</string>
+    <string name="wx_drizzle">Drizzle</string>
+    <string name="wx_rain">Rain</string>
+    <string name="wx_showers">Showers</string>
+    <string name="wx_snow">Snow</string>
+    <string name="wx_snow_showers">Snow showers</string>
+    <string name="wx_thunderstorm">Thunderstorm</string>
+</resources>

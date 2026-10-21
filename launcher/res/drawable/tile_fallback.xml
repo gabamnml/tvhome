@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Behind every tile, so apps whose banner has transparency still read as a
+     solid card rather than floating on the black. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#14FFFFFF" />
+    <corners android:radius="10dp" />
+</shape>
