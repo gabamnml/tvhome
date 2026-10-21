@@ -114,7 +114,7 @@ Everything else — R8, the signing key — is fetched or generated on first bui
 ## Quick start
 
 ```powershell
-git clone https://github.com/YOUR-USER/tvhome.git
+git clone https://github.com/gabamnml/tvhome.git
 cd tvhome\tools
 
 # 1. Point the scripts at your box. Copy the example and edit the IP.
